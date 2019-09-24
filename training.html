@@ -158,6 +158,46 @@
             </tr>
         </table>
 
+        <!-- 웹표준, 웹접근성, 크로스브라우징-->
+        <!-- form 양식지 -->
+        <form>
+            <!-- text, password, radio, checkbox -->
+            <input type="text" placeholder="아이디를 입력해주세요" value=""/>
+            <input type="password" placeholder="암호를 입력해주세요" value=""/>
+            <input type="radio" name="kms" value="1"/>
+            <input type="radio" name="kms" value="2"/>
+            <input type="radio" name="kms" value="3"/>
+            <!-- 같은 정봅의 라디오 버튼의 이름은 같아야 함 -->
+            <input type="radio" name="kmsd" value="1"/>
+            <input type="radio" name="kmsd" value="2"/>
+            <input type="radio" name="kmsd" value="3"/>
+            <input type="checkbox" value="1"/>
+            <input type="checkbox" value="2"/>
+            <input type="checkbox" value="3"/>
+            
+            <select>
+                <option>얼마나 셀렉트가 길어지는지 실험해보기 위해 주저리 주저리 적어보고 있지만 
+                    이제 슬슬 쓰기 귀찮아지면서도 또 한편으로는 지금까지 쓴게 아쉬워서 끊지 말고 
+                    계속 쓰고싶다.</option>
+                <option>김상원</option>
+                <option>불의 정령</option>
+            </select>
+
+            <!-- cols 열갯수(글자수), rows 행갯수(줄수) -->
+            <textarea cols="20" rows="3">
+                얼마나 감내해야하는지
+            
+
+            </textarea>
+
+            <!-- button 버튼 -->
+            <button> 버튼이름 </button>
+            <button onclick="alert('테스트완료')" value="테스트 버튼">눌러바</button>
+            
+            <!-- submit 제출 버튼 -->
+            <input type="submit" value="제출"/>
+        </form>
+
 
             
 
