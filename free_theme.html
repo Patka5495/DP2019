@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>자유 주제</title>
+        <meta charset="utf-8"/>
+        <style>
+            @import url('https://fonts.googleapis.com/css?family=Gugi&display=swap');
+            @import url('https://fonts.googleapis.com/css?family=Black+Han+Sans&display=swap');
+            body{
+                background-image: url("./기말/배경.jpg");
+                margin:0px; 
+            }
+            #wrap #main{          
+                height: 300px;    
+                display: block;
+
+            }
+            #wrap #main img{
+                margin: 0px 0px;
+                text-align: center;
+            }
+            #wrap .float_left{
+                padding-top: 30px;
+
+            }
+            #wrap .float_left ol{
+                float:left;
+                list-style: none;
+                color:white;
+                border-right: solid 1px white;
+                padding-right: 20px;
+                padding-left: 20px;
+                margin: 0px;
+            }
+            #wrap .float_left ol:last-child{
+                border-right: none;
+            }
+            #wrap{
+                font-family: "Gugi", sans-serif;
+                min-width: 1200px;
+                max-width: 2520px;
+                margin-left: auto;
+                margin-right: auto;
+            }
+            #wrap #content{
+                color: white;
+                padding: 0px 100px;
+            }
+            #wrap .white_line{
+                margin: 0px;
+                height: 0.5px;
+            }
+            #wrap .clear{
+                clear: both;
+                height: 0px;
+                overflow: hidden;
+            }
+            #wrap h1{
+                margin: 0px;
+                padding: 200px 0px;
+                text-align: center;
+                font-size: 50px;
+                min-width: 1000px;
+            }
+            #wrap #main div{
+                text-align: center;
+            }
+            #wrap span{
+                color:red;
+            }
+            #wrap .content_part1{
+                text-align: center;
+                float:left;
+                width: 500px;
+                margin-top: auto;
+                margin-top: auto;
+            }
+            #wrap .content_part2{
+                font-size: 25px;
+                float:left;
+                width: 1000px;
+                margin-top: auto;
+                margin-top: auto;
+            }
+            #wrap section{
+                width: 1500px;
+                margin-left: auto;
+                margin-right: auto;
+                padding: 0px 0px;
+            }
+            #wrap #part1{
+                height: 1000px;
+            }
+            #wrap h2{
+                margin: 50px;
+            }
+            #wrap #part2{
+                height: 1000px;
+            }
+            #wrap #part2 .content_part1{
+                margin: 100px 0px;
+            }
+            #wrap #part2 .content_part2{
+                margin: 200px 0px;
+            }
+            #wrap #part3{
+                height: 1000px;
+            }
+            #wrap #part3 .content_part1{
+                margin: 100px 0px;
+            }
+            #wrap #part3 .content_part2{
+                margin: 200px 0px;
+            }
+            #wrap .content_part2 a{
+                font-size: 200px;
+            }
+            #wrap #part4{
+                height: 1000px;
+            }
+            #wrap #part4 .content_part1{
+                margin: 150px 0px;
+            }
+            #wrap #part4 .content_part2{
+                margin: 200px 0px;
+            }
+            #wrap #part5{
+                height: 1000px;
+            }
+            #wrap #part5 .content_part1{
+                margin: 280px 0px;
+            }
+            #wrap #part5 .content_part2{
+                margin: 200px 0px;
+            }
+            #wrap #part6{
+                height: 1000px;
+            }
+            #wrap #part6 .content_part1{
+                margin: 150px 0px;
+            }
+            #wrap #part6 .content_part2{
+                margin: 200px 0px;
+            }
+            #wrap a:link{ color:white; text-decoration: none;}
+            #wrap a:visited{ color:white;}
+            #wrap a:hover { color: rgba(255, 255, 255, 0.815); }
+            #wrap a:active { color: white;}
+            #wrap a:focus {color: white;} 
+            #wrap p{
+                margin: 20px 0px;
+            }
+            
+            #wrap .algin_right{
+                text-align: right;
+            }        
+            #wrap .imgswap img:last-child{
+                display:none
+            } 
+            #wrap .imgswap:hover img:first-child{
+                display:none
+            } 
+            #wrap .imgswap:hover img:last-child{
+                display:inline-block
+            }
+            @import url('https://fonts.googleapis.com/css?family=Black+Han+Sans&display=swap');
+            .float_right{
+                float: right;
+            }
+            .float_left{
+                float: left;
+            }
+            .clear{
+                clear: both; /* 지우다: 양쪽*/
+                height: 0px; /* 높이: 0px; */
+                overflow: hidden; /* 넘쳤을 때: 숨김 */
+            }
+            #main_header{
+                background-color: black;
+                color:white;
+                
+            }
+            #main_header ol{
+                margin: 25px 0px;
+
+            }
+            #main_header ol li{
+                float:left;
+                list-style: none;
+                padding-right:20px;
+                font-size:20px;
+            }
+            #main_header nav a:link{color:white;}
+            #main_header nav a:visited{color:white;}
+            #main_header nav a:hover{color:white;}
+            #main_header nav a:active{color:white;}
+            #main_header nav a:focus{color:white;}
+            #cover{
+                font-family: "Black Han Sans",sans-serif ;
+                min-width: 1100px; /*최소넓이*/
+                max-width: 1920px; /*최대넓이*/
+                margin-left: auto;
+                margin-right: auto;
+            }
+            #main_header h1{
+                font-weight: normal;
+                padding-left: 20px;
+            }
+            #main_footer{
+                height: 200px;
+                background-color: rgb(179, 241, 160);
+            }
+            #main_footer .float_left{
+                margin:63px 0px 0px 50px
+            }
+            #main_footer .float_left li{
+                float: left;
+                list-style: none;
+                padding-right: 20px;
+                color: white;
+
+            }
+            #main_footer .float_right{
+                margin:50px 50px 0px 0px;
+            }
+            #main_footer .float_right li{
+                float: right;
+                list-style: none;
+                margin: 10px;
+            }            
+            #main_footer .float_left li:last-child{
+                font-size: 20px;
+            }
+            #QnA{
+                text-align: left;
+            }
+            #QnA div:first-child{
+                font-size: 80px;
+                padding-top:200px;
+            }
+            #QnA div:nth-child(2){
+                font-size: 25px;
+                padding:50px 0px
+            }
+            #wrap #content dl{
+                text-align: right;
+                font-size: 20px;
+                font-weight: lighter;
+            }
+            #wrap #dashed{
+                border: dashed 1px white;
+            }
+            #wrap #finish{
+                text-align: center;
+            }
+            #wrap #finish div:first-child{
+                padding-top: 150px;
+                font-size: 40px;
+            }
+            #wrap #finish div:nth-child(2){
+                padding: 200px 0px;
+                font-size: 300px;
+            }
+            #wrap footer{
+                color: white;
+                background-color: rgb(29, 29, 29);
+                height: 200px;
+                padding: 50px 0px 0px 40px;
+            }
+            #wrap footer a{
+                padding-right: 20px;
+            }
+            #wrap footer div{
+                font-size: 30px;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="cover">
+            <header id="main_header">
+                <nav>
+                    <a href="last_test_index.html"><h1 class="float_left">PatTKa's playground</h1></a>
+                    <ol class="float_right">
+                        <a href="layout1.html"><li>Layout1</li></a>
+                        <a href="layout2.html"><li>Layout2</li></a>
+                        <a href="layout3.html"><li>Layout3</li></a>
+                        <a href="free_theme.html"><li>Free Theme</li></a>
+                    </ol>
+                    <div class="clear"></div>
+                </nav>
+            </header>
+        </div>
+        <div id="wrap">
+            <header>
+                <div id="main">
+                    <div class="fadein"><img src="./기말/과나1.png"/></div>
+                    <nav>
+                        <li class="float_left">
+                            <ol>about</ol>
+                            <ol>#1. RABBOKKI</ol>
+                            <ol>#2. DGB</ol>
+                            <ol>#3. THE SOUP OF <span>DEVIL</span></ol>
+                            <ol>#4. QnA</ol>
+                            <ol>#5. TOAST SOACE</ol>
+                        </li>
+                    </nav>
+                </div>
+                <div class="clear"></div>
+                <hr class="white_line"/>
+            </header>
+            <div id="content">
+                <div id="part1">
+                    <h1>Who / What Is Gwana?</h1>
+                    <section>
+                        <div class="content_part1">
+                            <div class="imgswap">
+                                <a href="https://www.youtube.com/channel/UCZVD--cl8FLRn7kmSudAuBA">
+                                    <img src="./기말/유튜브_로그.png"/><img src="./기말/유튜브_로고.png"/>
+                                </a>
+                            </div>                       
+                        </div>
+                        <div class="content_part2">
+                            <p>
+                                'YOUTUBE 과나' 채널은 요리 레시피를 소개하는 유튜브 채널로 단순히 요리 채널이 아닌, 그래픽, 음악, 영상 등 여러 면에서의 특출난 장점을 가진 요리채널로, 첫 영상을 올린 지 불과 50일이 지나지 않아 20만 구독자를 달성, 최대 조회수 198만회를 달성한 해성같이 등장한 슈퍼 루키 유튜브 채널입니다.
+                            </p>
+                        </div>
+                        <div class="clear"></div>                     
+                    </section>
+                </div>
+                <hr class="white_line"/>
+                <div id="part2">                    
+                    <section>
+                        <h2>#1. RABBOKKI</h2>
+                        <div class="content_part1">
+                            <div class="imgswap"><img width="450px"src="./기말/1.png"/><img width="450px"src="./기말/1_2.png"/></div>                      
+                        </div>
+                        <div class="content_part2">
+                            <a href="https://www.youtube.com/channel/UCZVD--cl8FLRn7kmSudAuBA">PLAY</a>
+                            <p>
+                                과나를 세상에 알리게 된 첫 영상.<br/>
+                                지금껏 본적 없는 새롭고 즐거운 영상이 등장하자 사람들은 열광하였고 그의 인기를 수직상승시켰다.
+                            </p>
+                        </div>
+                        <div class="clear"></div>                     
+                    </section>
+                </div>
+                <hr class="white_line"/>
+                <div id="part3">                    
+                    <section>
+                        <h2>#2. DGB</h2>                    
+                        <div class="content_part2">
+                            <div class="algin_right">
+                                <a href="https://www.youtube.com/channel/UCZVD--cl8FLRn7kmSudAuBA">PLAY</a>
+                                <p>
+                                    첫 영상 이후 연속으로 대박친 영상.<br/>
+                                    강력한 중독성과 흥겨운 추임새들로 인해 강한 인기를 끌었다. 
+                                </p>
+                            </div>
+                        </div>
+                        <div class="content_part1">
+                            <div class="imgswap"><img width="250px"src="./기말/2.png"/><img width="250px"src="./기말/2_2.png"/></div>                      
+                        </div>
+                        <div class="clear"></div>                     
+                    </section>
+                </div>
+                <hr class="white_line"/>
+                <div id="part4">                    
+                    <section>
+                        <h2>#3. THE SOUP OF <span>DEVIL</span></h2>
+                        <div class="content_part1">
+                            <div class="imgswap"><img width="700px"src="./기말/3.png"/><img width="700px"src="./기말/3_2.png"/></div>                      
+                        </div>
+                        <div class="content_part2">
+                            <a href="https://www.youtube.com/channel/UCZVD--cl8FLRn7kmSudAuBA">PLAY</a>
+                            <p>
+                                과나를 세상에 알리게 된 첫 영상, 지금껏 본적 없는 새롭고 즐거운 영상이 등장하자 사람들은 열광하였고 그의 인기를 수직상승시켰다.
+                            </p>
+                        </div>
+                        <div class="clear"></div>                     
+                    </section>
+                </div>
+                <hr class="white_line"/>
+                <div id="part5">                    
+                    <section>
+                        <h2>#4. QnA</h2>                    
+                        <div class="content_part2">
+                            <div class="algin_right">
+                                <a href="https://www.youtube.com/channel/UCZVD--cl8FLRn7kmSudAuBA">PLAY</a>
+                                <p>
+                                    과나를 세상에 알리게 된 첫 영상, 지금껏 본적 없는 새롭고 즐거운 영상이 등장하자 사람들은 열광하였고 그의 인기를 수직상승시켰다.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="content_part1">
+                            <div class="imgswap"><img width="450px"src="./기말/4.png"/><img width="450px"src="./기말/4_2.png"/></div>                     
+                        </div>
+                        <div class="clear"></div>                     
+                    </section>
+                </div>
+                <hr class="white_line"/>
+                <div id="part6">                    
+                    <section>
+                        <h2>#5. TOAST SOACE</h2>
+                        <div class="content_part1">
+                            <div class="imgswap"><img width="550px"src="./기말/5.png"/><img width="550px"src="./기말/5_2.png"/></div>                    
+                        </div>
+                        <div class="content_part2">
+                            <a href="https://www.youtube.com/channel/UCZVD--cl8FLRn7kmSudAuBA">PLAY</a>
+                            <p>
+                                과나를 세상에 알리게 된 첫 영상, 지금껏 본적 없는 새롭고 즐거운 영상이 등장하자 사람들은 열광하였고 그의 인기를 수직상승시켰다.
+                            </p>
+                        </div>
+                        <div class="clear"></div>                     
+                    </section>
+                </div>
+                <hr class="white_line"/>
+                <div id="QnA">
+                    <div id="gwana_answer">
+                        GWANA'S ANSWER
+                    </div>
+                    <div>
+                        4번쨰 영상인 QnA에서 구독자들에게 받은 질문에 대한 답변들이다.
+                        과나의 답변을 들어보자
+                    </div>
+                </div>
+                <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+                <dl>
+                    <dt>Q1. 영상 제작 팀이 있나요? 아니면 혼자 만드시는 건가요? </dt>
+                    <br/>
+                    <dd>
+                        <div>A1. 팀, 크루, 회사가 아닌 혼자서 작업합니다.</div>
+                    </dd>
+                </dl>
+                <br/><br/>
+                <dl>
+                    <dt>Q2. 작업과정이 궁금합니다. </dt>
+                    <br/>
+                    <dd>
+                        <div>A2. 돼고비 기준으로 말씀드리자면<br/>
+                            1일차 - 메뉴결정, 요리연습, 레시피정리<br/>
+                            2~3일차 - 음악 대충 만든 다음, 가사를 쓴 후,<br/>
+                            4일차부터 부터 잠을 줄여가며 즉흥 녹음 후 음악을 완성합니다.<br/>
+                            5~7일차 - 요리촬영 후 편집을 합니다.
+                        </div>
+                    </dd>
+                </dl>
+                <br/><br/>
+                <dl>
+                    <dt>Q3. 정체가 궁금해요! </dt>
+                    <br/>
+                    <dd>
+                        <div>저는 어린 시절부터 음악, 미술, 요리, 영화를 좋아했고, 
+                            대학은 미대를 나와 음악, 미술 모두 합친 창의적인 일을 해보고 싶었습니다.<br/> 
+                            하지만, 당장 돈이 급해 맞지 않는 일을 하며 3년동안 방황을 하다가 얼마 전 마음을 고쳐잡고<br/> 
+                            음악, 미술, 영화, 음악 다 합친걸 해보자 결심하고 레시피를 작성해 유튜브로 편집을 배워가며 10월 초에 첫 영상을 올렸습니다.
+                        </div>
+                    </dd>
+                </dl>
+                <br/><br/>
+                <dl>
+                    <dt>Q4. 혹시 고양이 좋아하시나요? </dt>
+                    <br/>
+                    <dd>
+                        <div>A4. 고양이는 사랑합니다.</div>
+                    </dd>
+                </dl>
+                <br/><br/>
+                <dl>
+                    <dt>Q5. 닉네임의 뜻은 뭔가요? </dt>
+                    <br/>
+                    <dd>
+                        <div>A5. 없습니다.</div>
+                    </dd>
+                </dl>
+                <br/><br/>
+                <hr id="dashed"/>
+                <div id="finish">
+                    <div>
+                        지금 당장 YOUTUBE GWANA 채널을 만나보세요.
+                    </div>
+                    <div>
+                        <a href="https://www.youtube.com/channel/UCZVD--cl8FLRn7kmSudAuBA?sub_confirmation=1">
+                            SUBSCRIBE
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <footer>
+                YOUTUBE CHANNEL GWANA<br/>
+                SINCE 2019.10.6<br/>
+                <a href="https://www.youtube.com/channel/UCZVD--cl8FLRn7kmSudAuBA">YOUTUBE</a>
+                <a href="https://namu.wiki/w/%EA%B3%BC%EB%82%98">WIKI</a><br/><br/>
+                <div>LEGNED HAS JUST BEGUN</div>
+            </footer>
+        </div>
+        <div id=cover>
+            <footer id="main_footer">
+                <div class="float_left">
+                    <ul>
+                        <li>show all</li>
+                        <li>about me</li>
+                        <li>donate</li><br/><br/>
+                        <li>Kaywon Art & Desing Univeristy Digital Media Desingn<br/>
+                            Content Programming Last Test Index</li>                       
+                    </ul>
+                </div>
+                <div class="float_right">
+                    <ul>
+                        <a href="https://www.facebook.com/profile.php?id=100007016464586">
+                            <li><img src="./layout_media/layout1_footer_icon1.png"/></li>
+                        </a>
+                        <a href="https://www.instagram.com/seongeon_pk/?hl=ko">
+                            <li><img src="./기말/insta.png"/></li>
+                        </a>
+                        <div class="clear"></div>
+                    </ul>
+                    <div class="clear"></div>
+                </div>
+            </footer>
+        </div>
+    </body>
+</html>

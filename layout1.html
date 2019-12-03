@@ -4,11 +4,12 @@
         <title>layout1</title>
         <meta charset="utf-8"/>
         <style>
-            header,div,nav,footer,ul,li,h1,h2,h3{
+            @import url('https://fonts.googleapis.com/css?family=Black+Han+Sans&display=swap');
+            #wrap header,div,nav,footer,ul,li,h1,h2,h3{
                 border: dotted 0px black; /* 경계선 긋기*/
                 margin: px; /* 서로간에 여유공간 만들기*/
             }
-            header>ul>li{
+            #wrap header>ul>li{
                 float:left; /* 둥둥 떠다니게 하다 : 왼쪽 기준으로 */
                 list-style: none; /* 목록-모습: 없음 */
                 padding-left: 10px; /* 바깥여백-왼쪽 : 10px */
@@ -16,16 +17,16 @@
                 border-right: solid 1px gray;
                 /* 경계선: 실선 1px 회색 */
             }
-            header>ul{
+            #wrap header>ul{
                 margin-top:12px;
             }
-            header>ul>li:nth-child(5){
+            #wrap header>ul>li:nth-child(5){
                 border: none;
             }
-            header>h1{
+            #wrap header>h1{
                 margin: 0px;
             }
-            header{
+            #wrap header{
                 padding: 10px 50px;
             }
             .clear{
@@ -42,20 +43,20 @@
             #zoom{
                 margin: 10px;
             }
-            nav>ul>li{
+            #wrap nav>ul>li{
                 float:left; /* 둥둥 떠다니게 하다 : 왼쪽 기준으로 */
                 list-style: none; /* 목록-모습: 없음 */
                 padding-left: 10px; /* 바깥여백-왼쪽 : 10px */
                 padding-right: 10px; /* 바깥여백-오른쪽 : 10px */
             }
-            nav>ul>li:nth-child(4){
+            #wrap nav>ul>li:nth-child(4){
                 border: none;
             }
             
-            nav>ul{
+            #wrap nav>ul{
                 margin-top:27px;
             }
-            nav{
+            #wrap nav{
                 background-color: #ddd;
                 padding: 10px 50px;
             }
@@ -76,7 +77,7 @@
                 width: 480px;
                 margin: 0px 10px;
             }
-            section{
+            #wrap section{
                 width: 1000px;
                 margin-left: auto;
                 margin-right: auto;
@@ -93,38 +94,38 @@
             #content dd{
                 margin: 0px;
             }
-            footer{
+            #wrap footer{
                 background-color: #555;
                 color:#ccc;
                 padding: 10px 50px 50px 50px;
             }
-            footer>div>ul>li{
+            #wrap footer>div>ul>li{
                 float:left;
                 list-style: none;
                 padding: 0px 10px; /* 상하 좌우 */
                 border-right: solid 1px #ccc;
             }
-            footer>div>ul{
+            #wrap footer>div>ul{
                 padding: 0px;
             }
-            footer>div>ul>li:nth-child(6){
+            #wrap footer>div>ul>li:nth-child(6){
                 border: none;
             }
-            footer>div>ul>li:nth-child(1){
+            #wrap footer>div>ul>li:nth-child(1){
                 padding-left: 0px;
             }
-            footer>ul>li{
+            #wrap footer>ul>li{
                 float: left;
                 list-style: none;
                 padding: 0px 10px;
             }
-            footer>ul{
+            #wrap footer>ul{
                 padding: 0px;
             }
-            #footer_left{
+            #wrap #footer_left{
                 float:left;
             }
-            #footer_right{
+            #wrap #footer_right{
                 float:right;
             }
             #wrap{
@@ -136,11 +137,92 @@
             }
             body{
                 margin:0px;
+            }            
+            .float_right{
+                float: right;
+            }
+            .float_left{
+                float: left;
+            }
+            .clear{
+                clear: both; /* 지우다: 양쪽*/
+                height: 0px; /* 높이: 0px; */
+                overflow: hidden; /* 넘쳤을 때: 숨김 */
+            }
+            #main_header{
+                background-color: black;
+                color:white;
+                
+            }
+            #main_header ol{
+                margin: 25px 0px;
+
+            }
+            #main_header ol li{
+                float:left;
+                list-style: none;
+                padding-right:20px;
+                font-size:20px;
+            }
+            #main_header nav a:link{color:white;}
+            #main_header nav a:visited{color:white;}
+            #main_header nav a:hover{color:white;}
+            #main_header nav a:active{color:white;}
+            #main_header nav a:focus{color:white;}
+            #cover{
+                font-family: "Black Han Sans",sans-serif ;
+                min-width: 1100px; /*최소넓이*/
+                max-width: 1920px; /*최대넓이*/
+                margin-left: auto;
+                margin-right: auto;
+            }
+            #main_header h1{
+                font-weight: normal;
+                padding-left: 20px;
+            }
+            #main_footer{
+                height: 200px;
+                background-color: rgb(179, 241, 160);
+            }
+            #main_footer .float_left{
+                margin:63px 0px 0px 50px
+            }
+            #main_footer .float_left li{
+                float: left;
+                list-style: none;
+                padding-right: 20px;
+                color: white;
+
+            }
+            #main_footer .float_right{
+                margin:50px 50px 0px 0px;
+            }
+            #main_footer .float_right li{
+                float: right;
+                list-style: none;
+                margin: 10px;
+            }            
+            #main_footer .float_left li:last-child{
+                font-size: 20px;
             }
         </style>
     </head>
     <body>
-        <div id="wrap">
+        <div id="cover">
+            <header id="main_header">
+                <nav>
+                    <a href="last_test_index.html"><h1 class="float_left">PatTKa's playground</h1></a>
+                    <ol class="float_right">
+                        <a href="layout1.html"><li>Layout1</li></a>
+                        <a href="layout2.html"><li>Layout2</li></a>
+                        <a href="layout3.html"><li>Layout3</li></a>
+                        <a href="free_theme.html"><li>Free Theme</li></a>
+                    </ol>
+                    <div class="clear"></div>
+                </nav>
+            </header>
+        </div>   
+        <div id="wrap">            
             <header>
                 <h1 class="float_left">
                     <img src="./layout_media/layout1_head_logo.jpg"/>
@@ -303,6 +385,31 @@
                     <div class="clear"></div>
                 </ul>
                 <div class="clear"></div>
+            </footer>
+        </div>
+        <div id=cover>
+            <footer id="main_footer">
+                <div class="float_left">
+                    <ul>
+                        <li>show all</li>
+                        <li>about me</li>
+                        <li>donate</li><br/><br/>
+                        <li>Kaywon Art & Desing Univeristy Digital Media Desingn<br/>
+                            Content Programming Last Test Index</li>                       
+                    </ul>
+                </div>
+                <div class="float_right">
+                    <ul>
+                        <a href="https://www.facebook.com/profile.php?id=100007016464586">
+                            <li><img src="./layout_media/layout1_footer_icon1.png"/></li>
+                        </a>
+                        <a href="https://www.instagram.com/seongeon_pk/?hl=ko">
+                            <li><img src="./기말/insta.png"/></li>
+                        </a>
+                        <div class="clear"></div>
+                    </ul>
+                    <div class="clear"></div>
+                </div>
             </footer>
         </div>
     </body>

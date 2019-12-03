@@ -5,43 +5,44 @@
         <meta charset="utf-8"/>
         <style>
             /* css 작성하는 곳 */
-            header{
+            @import url('https://fonts.googleapis.com/css?family=Black+Han+Sans&display=swap');
+            #wrap header{
                 background-color: #02918c;
                 color: white;
                 padding: 10px 50px;
             }
-            header>h1>span:nth-child(1){
+            #wrap header>h1>span:nth-child(1){
                 color:white;
             }
-            header>h1>span:nth-child(2){
+            #wrap header>h1>span:nth-child(2){
                 color: #cfc01d;
             }
-            header>nav>ul>li{
+            #wrap header>nav>ul>li{
                 float:left;
             }
-            .clear{
+            #wrap .clear{
                 clear: both;
                 height: 0px;
                 overflow: hidden;
             }
-            header>nav>ul>li{
+            #wrap header>nav>ul>li{
                 float: left;
                 list-style: none;
                 padding: 0px 10px;
             }
-            .float_left{
+            #wrap .float_left{
                 float: left;
             }
-            .float_right{
+            #wrap .float_right{
                 float: right;
             }
-            header>h1{
+            #wrap header>h1{
                 margin: 0px;
             }
-            header ul{
+            #wrap header ul{
                 margin: 12.5px 0px;
             }
-            #main_visual{
+            #wrap #main_visual{
                 background-image: url("./layout2_media/layout2_visual.jpg");
                 background-size: auto 100%; /* cover */
                 background-size: cover;
@@ -55,34 +56,34 @@
 
                 padding: 330px 0px;     
             }
-            #main_visual h2{
+            #wrap #main_visual h2{
                 letter-spacing: 25px;
                 font-size: 80px;
                 margin: 0px 0px;
             }
-            #title_top{
+            #wrap #title_top{
                 font-size:40px;
             }
-            #title_bottom{
+            #wrap #title_bottom{
                 font-size:30px;
             }
-            #main_visual img{
+            #wrap #main_visual img{
                 margin-top: 70px;
             }
-            section{
+            #wrap section{
                 text-align: center;
             }
-            section h3{
+            #wrap section h3{
                 color:#02918c;
                 font-size: 60px;
                 font-weight: normal;
                 margin:100px 0px;
             }
-            section p{
+            #wrap section p{
                 margin: 100px 350px;
                 font-size: 25px;
             }
-            section>#about_list>li{
+            #wrap section>#about_list>li{
                 float: left;
                 width: 400px;
                 width: calc(25% - (1px / 4 * 3) - 60px);
@@ -90,30 +91,30 @@
                 border-right: solid 1px gray;
                 padding: 0px 30px;
             }
-            section>#about_list>li:nth-child(4){
+            #wrap section>#about_list>li:nth-child(4){
                 border-right: none;
             }
-            section #about_list{
+            #wrap section #about_list{
                 padding: 0px;
                 margin: 0px 150px;
             }
-            section dd{
+            #wrap section dd{
                 margin:0px;
             }
-            section dt{
+            #wrap section dt{
                 font-size: 20px;
             }
-            #work_list{
+            #wrap #work_list{
                 margin:0px;
                 padding:0px;
             }
-            #work_list>li{
+            #wrap #work_list>li{
                 float: left;
                 list-style: none;
                 width: calc(25%);
             }
-            #work_list img{
-                width: 100%; /* 있을 수 있는 공간 100% 기준 */
+            #wrap #work_list img{
+                width:100%; /* 있을 수 있는 공간 100% 기준 */
                 display: inline; /* 원래 이미지의 출력 방식*/
                 display: block; /* 블록형으로 변경 */
             }
@@ -125,10 +126,91 @@
                 max-width: 1920px;
                 margin-left: auto;
                 margin-right: auto;
+            }            
+            .float_right{
+                float: right;
+            }
+            .float_left{
+                float: left;
+            }
+            .clear{
+                clear: both; /* 지우다: 양쪽*/
+                height: 0px; /* 높이: 0px; */
+                overflow: hidden; /* 넘쳤을 때: 숨김 */
+            }
+            #main_header{
+                background-color: black;
+                color:white;
+                
+            }
+            #main_header ol{
+                margin: 25px 0px;
+
+            }
+            #main_header ol li{
+                float:left;
+                list-style: none;
+                padding-right:20px;
+                font-size:20px;
+            }
+            #main_header nav a:link{color:white;}
+            #main_header nav a:visited{color:white;}
+            #main_header nav a:hover{color:white;}
+            #main_header nav a:active{color:white;}
+            #main_header nav a:focus{color:white;}
+            #cover{
+                font-family: "Black Han Sans",sans-serif ;
+                min-width: 1100px; /*최소넓이*/
+                max-width: 1920px; /*최대넓이*/
+                margin-left: auto;
+                margin-right: auto;
+            }
+            #main_header h1{
+                font-weight: normal;
+                padding-left: 20px;
+            }
+            #main_footer{
+                height: 200px;
+                background-color: rgb(179, 241, 160);
+            }
+            #main_footer .float_left{
+                margin:63px 0px 0px 50px
+            }
+            #main_footer .float_left li{
+                float: left;
+                list-style: none;
+                padding-right: 20px;
+                color: white;
+
+            }
+            #main_footer .float_right{
+                margin:50px 50px 0px 0px;
+            }
+            #main_footer .float_right li{
+                float: right;
+                list-style: none;
+                margin: 10px;
+            }            
+            #main_footer .float_left li:last-child{
+                font-size: 20px;
             }
         </style>
     </head>
     <body>
+        <div id="cover">
+            <header id="main_header">
+                <nav>
+                    <a href="last_test_index.html"><h1 class="float_left">PatTKa's playground</h1></a>
+                    <ol class="float_right">
+                        <a href="layout1.html"><li>Layout1</li></a>
+                        <a href="layout2.html"><li>Layout2</li></a>
+                        <a href="layout3.html"><li>Layout3</li></a>
+                        <a href="free_theme.html"><li>Free Theme</li></a>
+                    </ol>
+                    <div class="clear"></div>
+                </nav>
+            </header>
+        </div>  
         <div id="wrap">
             <header>
                 <h1 class="float_left">
@@ -208,6 +290,31 @@
                     <div class="clear"></div>
                 </ul>
             </section>
+        </div>
+        <div id=cover>
+            <footer id="main_footer">
+                <div class="float_left">
+                    <ul>
+                        <li>show all</li>
+                        <li>about me</li>
+                        <li>donate</li><br/><br/>
+                        <li>Kaywon Art & Desing Univeristy Digital Media Desingn<br/>
+                            Content Programming Last Test Index</li>                       
+                    </ul>
+                </div>
+                <div class="float_right">
+                    <ul>
+                        <a href="https://www.facebook.com/profile.php?id=100007016464586">
+                            <li><img src="./layout_media/layout1_footer_icon1.png"/></li>
+                        </a>
+                        <a href="https://www.instagram.com/seongeon_pk/?hl=ko">
+                            <li><img src="./기말/insta.png"/></li>
+                        </a>
+                        <div class="clear"></div>
+                    </ul>
+                    <div class="clear"></div>
+                </div>
+            </footer>
         </div>
     </body>
 </html>
